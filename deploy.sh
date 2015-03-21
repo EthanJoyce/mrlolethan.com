@@ -18,4 +18,3 @@ fi
 # Deploy the new stuff!
 mkdir -p /var/www/
 cp -r public/ /var/www/
-cp .htaccess /var/www/public
