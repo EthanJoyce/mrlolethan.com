@@ -1,4 +1,7 @@
-#!/bin/sh
+#!/bin/bash
+
+# Enable extglob
+shopt -s extglob
 
 # Only allow the super-user to run the script
 if [ "$(id -u)" != "0" ]; then
@@ -13,6 +16,6 @@ if [ -d /var/www/public ]; then
 fi
 
 # Deploy the new stuff!
-mkdir -p /var/www/public
-cp -r * /var/www/public
+mkdir -p /var/www/
+cp -r public/ /var/www/
 cp .htaccess /var/www/public
