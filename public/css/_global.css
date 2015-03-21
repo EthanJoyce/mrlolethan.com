@@ -18,3 +18,11 @@
 .avatar-32 {
     border: 1px solid aqua;
 }
+
+
+/*
+ * GitHub logo
+ */
+.octocat {
+    float: right;
+}
