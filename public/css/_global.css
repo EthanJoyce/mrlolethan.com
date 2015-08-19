@@ -26,3 +26,11 @@
 .octocat {
     float: right;
 }
+
+
+/*
+ * JS licenses
+ */
+.jslicense {
+    font-color: lime;
+}
