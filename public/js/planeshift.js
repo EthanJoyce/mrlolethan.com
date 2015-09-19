@@ -27,9 +27,10 @@ function calculate() {
 
     var triaPerPP = 30;
 
-    var startLevel = document.getElementById("startLevel").value;
+    var startLevel = parseInt(document.getElementById("startLevel").value);
     var currentLevel = startLevel;
-    var newLevel = document.getElementById("newLevel").value;
+    var newLevel = parseInt(document.getElementById("newLevel").value);
+ 
     var requiredPP = 0;
     var requiredTria = 0;
 
