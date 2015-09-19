@@ -4,16 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="About me, MrLolEthan.">
+    <meta name="description" content="A calculator for PlaneShift.">
     <meta name="author" content="MrLolEthan">
     <link rel="icon" href="favicon.ico">
 
-    <title>MrLolEthan - About</title>
+    <title>MrLolEthan - PlaneShift Calculator</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="css/_global.css" rel="stylesheet">
+    <link href="css/planeshift.css" rel="stylesheet">
     <link href="bootstrap/examples/cover/cover.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -23,8 +24,8 @@
     <![endif]-->
   </head>
 
-  <body>
 
+  <body>
     <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
@@ -34,41 +35,26 @@
           <div class="masthead clearfix">
             <div class="inner">
               <img class="masthead-brand avatar-32" src="images/avatar.jpg" alt="Avatar" height="32" width="32"/>
-              <h3 class="masthead-brand">MrLolEthan - About</h3>
+              <h3 class="masthead-brand">MrLolEthan - PlaneShift Calculator</h3>
               <nav>
                 <ul class="nav masthead-nav">
                   <li><a href="home">Home</a></li>
-                  <li class="active"><a href="about">About</a></li>
+                  <li><a href="about">About</a></li>
                   <li><a href="contact">Contact</a></li>
-		  <li><a href="planeshift">PlaneShift Calculator</a></li>
-                </ul>
+                  <li class="active"><a href="planeshift">PlaneShift Calculator</a></li>
+		</ul>
               </nav>
             </div>
           </div>
 
-          <div class="inner cover fadein fadeout">
-            <div style="padding:10%;">
-              <p class="lead">
-                <p class="lead">
-                  I'm a freelance software developer and freedom enthusiast.
-                  I'm interested in all forms of CS/<a style="color: green;" href="https://en.wikipedia.org/wiki/Hacker_(programmer_subculture)">hacking</a>.
-                  These are the main languages I work with:
-                </p>
-                <ul style="list-style-type: square; text-align: left;">
-                  <li>Java (SE) - My most fluent (and worked with) language.</li>
-                  <li>Python</li>
-                  <li>C</li>
-                  <li>ASM - NASM, x86 instruction set</li>
-                  <li>PHP - <3</li>
-                </ul>
-                <p class="lead">
-                  I'm also loosely involved with the InfoSec area.
-                  I tend to <strike>waste</strike> <strong>spend</strong> a decent portion of time watching anime (<a href="http://myanimelist.net/animelist/mrlolethan" target="_blank" style="color: #0066FF;">MAL</a>).
-                  I post most of my work on GitHub, so feel free to check me out (links can be found on my contact page).
-                </p>
-              </p>
-            </div>
-          </div>
+          <div>
+	    <form id="calculatorForm">
+	        Your current level: <input type="number" id="startLevel" onkeypress='return event.charCode >= 48 && event.charCode <= 57 || event.charCode != 8'/><br>
+		Your desired level: <input type="number" id="newLevel" onkeypress='return event.charCode >= 48 && event.charCode <= 57 || event.charCode != 8'/><br>
+		<input type="button" onclick="calculate()" value="Calculate"/>
+	    </form>
+	    <h3 id="results" style="text-align: left; visibility: hidden">Results go here.</h3>
+	  <div>
 
           <div class="mastfoot">
             <div class="inner">
@@ -80,13 +66,13 @@
                 mrlolethan.com
               </span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.mrlolethan.com/" property="cc:attributionName" rel="cc:attributionURL">MrLolEthan</a> is licensed under a
               <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-              <br><a id="jslicense" href="weblabels.html" rel="jslicense">JavaScript license information</a>
-	      <br/>&copy; MrLolEthan, 2015
-              <a href="https://github.com/mrlolethan/mrlolethan.com" target="_blank">
+	      <br><a id="jslicense" href="weblabels.html" rel="jslicense">JavaScript license information</a>
+              <br/>&copy; MrLolEthan, 2015
+	      <a href="https://github.com/mrlolethan/mrlolethan.com" target="_blank">
 	        <img class="octocat" alt="GitHub logo" src="https://github.com/favicon.ico"/>
-	      </a>
-            </div>
-          </div>
+              </a>
+	    </div>
+	  </div>
 
         </div>
 
@@ -105,7 +91,7 @@
 
     <script type="text/javascript" src="js/fadein.js"></script>
     <script type="text/javascript" src="js/fadeout.js"></script>
+
+    <script type="text/javascript" src="js/planeshift.js"></script>
   </body>
 </html>
-
-
